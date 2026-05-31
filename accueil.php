@@ -22,7 +22,7 @@
     </p>
 
     <p>
-    Cliquez ci-dessous pour vous connecter à votre espace.
+    Cliquez ci-dessous pour vous connecter à votre espace. TEST
     </p>
       <button onclick="window.location.href='login.php'" class="boutonlogin">
       Connexion
