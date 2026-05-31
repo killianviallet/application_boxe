@@ -1,0 +1,216 @@
+
+nav {
+    background-color: hsl(0, 0%, 0%);
+    padding: 1%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+body {
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {margin: 50px auto;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(0, 0, 0);
+  border:1px solid black;
+  width: 50%;
+}
+
+th {border: 1px solid rgb(255, 255, 255);
+  padding: 1%;
+  padding: 5px;
+  color:white;
+}
+
+td {border: 1px solid rgb(255, 255, 255);
+  padding: 1%;
+  color:white;
+}
+
+tr {border: 1px solid rgb(255, 255, 255);
+  padding: 1%;
+  color:white;
+}
+
+.combat {background-color: #ffffffde;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+  width: 25%;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+}
+
+.bienvenue { font-size: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+
+.horaire {font-size: 20px;
+
+}
+
+h2{color:rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+
+}
+
+
+.location {background-color: #ffffffde;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: 2px solid black;
+  width: 40%;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+}
+
+h1 {background-color: black;
+  color:white;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0,8%;
+  border-radius: 20px;
+  padding: 5px;
+
+}
+
+.corps {
+  background-image: url("boxe.jpg");
+    background-size: cover;
+    height: 150vh;
+}
+
+img { background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.corps2 { background-image: url("boxe2.jpg");
+    background-size: cover;
+     height: 150vh;
+}
+
+
+.login { background-color: #ffffffde;
+    border: 2px solid black;
+    width: 25%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 35%;;
+}
+
+
+.bandeau {background-color: #ffffffde;
+    border: 2px solid black;
+    width: 25%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    margin-left: 8%;} 
+
+
+
+.boutonlogin { background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boutonlogin:hover {
+   color: #00bcd4;
+}
+
+
+
+
+
+.cards-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top: 5%;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:10px;
+    border-radius: 5px;
+    border:1px solid black;
+    text-align: center;
+
+}
+
+.card img{
+    width:100%;
+}
+
+
+.card button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    background: black;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
