@@ -1,66 +1,86 @@
 <?php
+session_start();
 include("traitement.php");
-include("traitement_achat.php");
+
+$nbArticles = 0;
+
+if(isset($_SESSION['panier']))
+{
+    $nbArticles = array_sum($_SESSION['panier']);
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boxeur</title>
+    <title>PunchFlow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <h2>PunchFlow</h2>
-        <a href="accueil.php">Accueil</a>
-        <a href="achat.php">Achat</a>
-  </nav>
-  <div class="corps">
+
+<nav>
+    <h2>PunchFlow</h2>
+    <a href="javascript:history.back()">Retour</a>
+    <a href="accueil.php">Accueil</a>
+    <a href="achat.php">Achat</a>
+    <a href="prochain_entrainement.php">Prochain entrainement</a>
+    <a href="panier.php">
+        Panier (<?php echo $nbArticles; ?>)
+    </a>
+</nav>
+
+<div class="corps">
+
     <h1>Nos produits</h1>
-<div class="cards-container">
 
-<?php
+    <div class="cards-container">
 
-$result = $connexion->query("SELECT * FROM produit");
+    <?php
 
-while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    $result = $connexion->query("SELECT * FROM produit");
 
-?>
+    while($row = $result->fetch(PDO::FETCH_ASSOC))
+    {
+    ?>
 
-    <div class="card">
+        <div class="card">
 
-        <img src="<?php echo $row['image']; ?>" alt="produit">
+            <img src="<?php echo $row['image']; ?>" alt="produit">
 
-        <h3>
-            <?php echo $row['nom_prod']; ?>
-        </h3>
+            <h3>
+                <?php echo $row['nom_prod']; ?>
+            </h3>
 
-        <p>
-            <?php echo $row['prix_prod']; ?> $
-        </p>
+            <p>
+                <?php echo $row['prix_prod']; ?> $
+            </p>
 
-        <p>
-            Stock : <?php echo $row['stock']; ?>
-        </p>
+            <p>
+                Stock : <?php echo $row['stock']; ?>
+            </p>
 
-        <form action="traitement_achat.php" method="POST">
+            <form action="traitement_achat.php" method="POST">
 
-            <input type="hidden" name="id_prod"
-            value="<?php echo $row['id_prod']; ?>">
+                <input
+                    type="hidden"
+                    name="id_prod"
+                    value="<?php echo $row['id_prod']; ?>">
 
-            <button type="submit">
-                Acheter
-            </button>
+                <button type="submit">
+                    Ajouter au panier
+                </button>
 
-        </form>
+            </form>
+
+        </div>
+
+    <?php
+    }
+    ?>
 
     </div>
-
-<?php
-}
-?>
 
 </div>
 

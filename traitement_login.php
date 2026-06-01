@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["login"] = $boxeur["login_boxeur"];
         $_SESSION["role"] = "boxeur";
 
-        header("Location: achat.php");
+        header("Location: prochain_entrainement.php");
         exit;
     }
 

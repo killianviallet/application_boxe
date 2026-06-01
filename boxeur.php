@@ -13,6 +13,7 @@ include("traitement.php");
 <body>
     <nav>
         <h2>PunchFlow</h2>
+        <a href="javascript:history.back()">Retour</a>
         <a href="accueil.php">Accueil</a>
         <a href="boxeur.php">Boxeur</a>
         <a href="entrainement.php">Entrainement</a>

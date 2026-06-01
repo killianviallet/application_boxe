@@ -14,6 +14,7 @@ include("traitement.php");
 </head>
  <nav>
     <h2>PunchFlow</h2>
+    <a href="javascript:history.back()">Retour</a>
     <a href="accueil.php">Accueil</a>
   </nav>
 <body>
