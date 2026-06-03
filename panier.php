@@ -29,10 +29,11 @@ if(isset($_POST['valider_panier']))
     <a href="achat.php">Achat</a>
 </nav>
 
-<div class="corps">
+<div class="corps"><br><br>
 
     <h1>Mon panier</h1>
 
+    <div class="location">
     <?php
 
     if($message != "")
@@ -124,7 +125,7 @@ if(isset($_POST['valider_panier']))
     }
 
     ?>
-
+<div>
 </div>
 
 </body>

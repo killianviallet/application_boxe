@@ -1,6 +1,9 @@
 <?php
+
 include("traitement.php");
-include("traitement_entrainement.php")
+include("traitement_entrainement.php");
+
+
 ?>
 
 <!DOCTYPE html>

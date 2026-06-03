@@ -1,5 +1,9 @@
 <?php
+
+session_start();
 include("traitement.php");
+
+
 
 $req = $connexion->query("
     SELECT *

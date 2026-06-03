@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include("traitement.php");
 
 function ajouterEntrainement($connexion, $id_ent, $date_ent, $heure_debut_ent, $heure_fin_ent) {

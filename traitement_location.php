@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 include("traitement.php");
 
 function ajouterLocation($connexion, $id_location, $date_location, $heure_debut, $heure_fin, $nb_ext, $id_ent, $id_ring, $id_ext) {

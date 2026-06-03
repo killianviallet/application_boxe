@@ -1,5 +1,8 @@
 <?php
+
+session_start();
 include("traitement.php");
+
 ?>
 
 <!DOCTYPE html>

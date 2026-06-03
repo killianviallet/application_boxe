@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include("traitement.php");
 
 $nbArticles = 0;
@@ -31,7 +31,7 @@ if(isset($_SESSION['panier']))
     </a>
 </nav>
 
-<div class="corps">
+<div class="corps"><br><br>
 
     <h1>Nos produits</h1>
 
