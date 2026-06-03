@@ -3,7 +3,10 @@
 session_start();
 include("traitement.php");
 
-
+if ($_SESSION["role"] !== "boxeur") {
+    header("Location: login.php");
+    exit;
+}
 
 $req = $connexion->query("
     SELECT *

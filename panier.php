@@ -2,6 +2,11 @@
 session_start();
 include("traitement.php");
 
+if ($_SESSION["role"] !== "boxeur") {
+    header("Location: login.php");
+    exit;
+}
+
 $message = "";
 
 if(isset($_POST['valider_panier']))
@@ -33,7 +38,7 @@ if(isset($_POST['valider_panier']))
 
     <h1>Mon panier</h1>
 
-    <div class="location">
+    <div class="panier">
     <?php
 
     if($message != "")
@@ -84,12 +89,12 @@ if(isset($_POST['valider_panier']))
 
                     <p>
                         Prix unitaire :
-                        <?php echo $produit['prix_prod']; ?> $
+                        <?php echo $produit['prix_prod']; ?> €
                     </p>
 
                     <p>
                         Sous-total :
-                        <?php echo $sousTotal; ?> $
+                        <?php echo $sousTotal; ?> €
                     </p>
 
                 </div>
@@ -100,9 +105,9 @@ if(isset($_POST['valider_panier']))
 
         ?>
 
-        <h2>
-            Total : <?php echo $total; ?> $
-        </h2>
+        <h3>
+            Total : <?php echo $total; ?> €
+        </h3>
 
         <form method="POST">
 
@@ -114,6 +119,7 @@ if(isset($_POST['valider_panier']))
 
         </form>
 
+        
         <?php
     }
     else
@@ -125,7 +131,6 @@ if(isset($_POST['valider_panier']))
     }
 
     ?>
-<div>
 </div>
 
 </body>

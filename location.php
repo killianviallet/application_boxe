@@ -3,6 +3,10 @@
 include ("traitement.php");
 include ("traitement_location.php");
 
+if ($_SESSION["role"] !== "entraineur") {
+    header("Location: login.php");
+    exit;
+}
 
 ?>
 

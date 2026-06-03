@@ -2,6 +2,11 @@
 
 include("traitement.php");
 
+if ($_SESSION["role"] !== "boxeur") {
+    header("Location: login.php");
+    exit;
+}
+
 $nbArticles = 0;
 
 if(isset($_SESSION['panier']))
@@ -54,7 +59,7 @@ if(isset($_SESSION['panier']))
             </h3>
 
             <p>
-                <?php echo $row['prix_prod']; ?> $
+                <?php echo $row['prix_prod']; ?>€
             </p>
 
             <p>

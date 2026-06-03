@@ -3,6 +3,11 @@
 session_start();
 include("traitement.php");
 
+if ($_SESSION["role"] !== "entraineur") {
+    header("Location: login.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
