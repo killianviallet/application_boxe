@@ -214,11 +214,13 @@ img { background-size: cover;
 
 
 .panier {background-color: #ffffffde;
+  display:flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   margin: auto;
   border: 2px solid black;
-  width: 19%;
+  width: 30%;
   padding: 20px;
   font-size: 20px;
   margin-top: 50px;

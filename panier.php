@@ -60,13 +60,12 @@ if(isset($_POST['valider_panier']))
     {
         foreach($_SESSION['panier'] as $id_prod => $quantite)
         {
-            $req = $connexion->prepare(
-                'SELECT * FROM produit WHERE id_prod = ?'
-            );
+          
+        $requete = $connexion->prepare('SELECT * FROM produit WHERE id_prod = :id_prod');
 
-            $req->execute([$id_prod]);
+        $requete->execute(['id_prod' => $id_prod]);
 
-            $produit = $req->fetch(PDO::FETCH_ASSOC);
+            $produit = $requete->fetch(PDO::FETCH_ASSOC);
 
             if($produit)
             {
@@ -104,6 +103,7 @@ if(isset($_POST['valider_panier']))
         }
 
         ?>
+         
 
         <h3>
             Total : <?php echo $total; ?> €

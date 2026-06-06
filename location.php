@@ -77,8 +77,8 @@ if ($_SESSION["role"] !== "entraineur") {
             <th>ID Externe</th>
         </tr>
         <?php
-        $result = $connexion->query("SELECT * FROM location");
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        $resultat = $connexion->query("SELECT * FROM location");
+        while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>".$row['id_location']."</td>";
             echo "<td>".$row['date_location']."</td>";

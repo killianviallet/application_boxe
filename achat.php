@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include("traitement.php");
 
 if ($_SESSION["role"] !== "boxeur") {
@@ -44,9 +45,9 @@ if(isset($_SESSION['panier']))
 
     <?php
 
-    $result = $connexion->query("SELECT * FROM produit");
+    $resultat = $connexion->query("SELECT * FROM produit");
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC))
+    while($row = $resultat->fetch(PDO::FETCH_ASSOC))
     {
     ?>
 

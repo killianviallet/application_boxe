@@ -61,8 +61,8 @@ if ($_SESSION["role"] !== "entraineur") {
             <th>Heure Fin</th>
         </tr>
         <?php
-        $result = $connexion->query("SELECT * FROM entrainement");
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        $resultat = $connexion->query("SELECT * FROM entrainement");
+        while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>".$row['id_ent']."</td>";
             echo "<td>".$row['date_ent']."</td>";

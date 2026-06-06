@@ -30,5 +30,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit(); 
 }
 
-$result = $connexion->query("SELECT * FROM entrainement");
+$resultat = $connexion->query("SELECT * FROM entrainement");
 ?>

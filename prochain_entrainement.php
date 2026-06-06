@@ -8,13 +8,8 @@ if ($_SESSION["role"] !== "boxeur") {
     exit;
 }
 
-$req = $connexion->query("
-    SELECT *
-    FROM entrainement
-    ORDER BY date_ent DESC,
-             heure_debut_ent DESC
-    LIMIT 3
-");
+$requete = $connexion->query(" SELECT * FROM entrainement ORDER BY date_ent DESC, heure_debut_ent DESC LIMIT 3");
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +46,7 @@ $req = $connexion->query("
 
         <?php
 
-        while($row = $req->fetch(PDO::FETCH_ASSOC))
+        while($row = $requete->fetch(PDO::FETCH_ASSOC))
         {
             echo "<tr>";
             echo "<td>".$row['id_ent']."</td>";

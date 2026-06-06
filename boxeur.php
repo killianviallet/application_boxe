@@ -38,8 +38,8 @@ if ($_SESSION["role"] !== "entraineur") {
             <th>Sexe</th>
         </tr>
         <?php
-       $result = $connexion->query("SELECT * FROM boxeur");
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+       $resultat = $connexion->query("SELECT * FROM boxeur");
+        while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>".$row['id_boxeur']."</td>";
             echo "<td>".$row['nom_boxeur']."</td>";

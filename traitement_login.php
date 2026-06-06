@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sel = "MonSel";
     $mdp_hash = hash("sha256", $mdp . $sel);
 
-    $req = $connexion->prepare("SELECT * FROM entraineur WHERE login_ent = ?");
-    $req->execute([$login]);
-    $entraineur = $req->fetch();
+    $requete = $connexion->prepare("SELECT * FROM entraineur WHERE login_ent = ? ");
+    $requete->execute([$login]);
+    $entraineur = $requete->fetch();
 
     if ($entraineur && $mdp_hash === $entraineur["mdp_ent"]) {
         $_SESSION["login"] = $entraineur["login_ent"];
@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
 
-    $req = $connexion->prepare("SELECT * FROM boxeur WHERE login_boxeur = ?");
-    $req->execute([$login]);
-    $boxeur = $req->fetch();
+    $requete = $connexion->prepare("SELECT * FROM boxeur WHERE login_boxeur = ?");
+    $requete->execute([$login]);
+    $boxeur = $requete->fetch();
 
     if ($boxeur && $mdp_hash === $boxeur["mdp_boxeur"]) {
         $_SESSION["login"] = $boxeur["login_boxeur"];
